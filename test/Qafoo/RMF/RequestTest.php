@@ -3,6 +3,8 @@
  * This file is part of the Qafoo RMF Component.
  *
  * @version $Revision$
+ * @copyright Copyright (c) 2011 Qafoo GmbH
+ * @license Dual licensed under the MIT and GPL licenses.
  */
 
 namespace Qafoo\RMF;
