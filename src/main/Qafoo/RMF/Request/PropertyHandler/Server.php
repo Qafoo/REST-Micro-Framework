@@ -17,15 +17,15 @@ class Server extends PropertyHandler
 {
     /**
      * Name of key in PHPs $_SERVER array.
-     * 
+     *
      * @var string
      */
     protected $key;
 
     /**
      * Construct from key in PHPs $_SERVER array
-     * 
-     * @param string $key 
+     *
+     * @param string $key
      * @return void
      */
     public function __construct( $key )
@@ -35,7 +35,7 @@ class Server extends PropertyHandler
 
     /**
      * Get value of property handler
-     * 
+     *
      * @return mixed
      */
     public function getValue()

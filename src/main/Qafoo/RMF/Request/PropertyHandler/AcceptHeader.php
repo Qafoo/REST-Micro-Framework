@@ -17,23 +17,23 @@ class AcceptHeader extends PropertyHandler
 {
     /**
      * Name of Accept header to parse
-     * 
+     *
      * @var string
      */
     protected $key;
 
     /**
      * Default value to return, if Accept header is unparsable
-     * 
+     *
      * @var string
      */
     protected $default;
 
     /**
      * Construct from name of Accept header to parse
-     * 
-     * @param string $key 
-     * @param string $default 
+     *
+     * @param string $key
+     * @param string $default
      * @return void
      */
     public function __construct( $key, $default )
@@ -44,7 +44,7 @@ class AcceptHeader extends PropertyHandler
 
     /**
      * Get value of property handler
-     * 
+     *
      * @return mixed
      */
     public function getValue()
@@ -66,8 +66,8 @@ class AcceptHeader extends PropertyHandler
      * Parse accept header
      *
      * Returns a sorted list of the available accept headers.
-     * 
-     * @param string $header 
+     *
+     * @param string $header
      * @return array
      */
     protected function parse( $header )

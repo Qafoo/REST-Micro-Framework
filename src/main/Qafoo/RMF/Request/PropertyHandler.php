@@ -16,7 +16,7 @@ abstract class PropertyHandler
 {
     /**
      * Get value of property handler
-     * 
+     *
      * @return mixed
      */
     abstract public function getValue();

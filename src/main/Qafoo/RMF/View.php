@@ -19,9 +19,9 @@ abstract class View
 {
     /**
      * Display the controller result
-     * 
-     * @param Request $request 
-     * @param mixed $result 
+     *
+     * @param Request $request
+     * @param mixed $result
      * @return void
      */
     abstract public function display( Request $request, $result );

@@ -20,7 +20,7 @@ class Html extends View
 {
     /**
      * Mapping of HTTP status codes to error names
-     * 
+     *
      * @var array
      */
     protected $errors = array(
@@ -41,7 +41,7 @@ class Html extends View
 
     /**
      * The default error template.
-     * 
+     *
      * @var string
      */
     protected $errorTemplate;
@@ -60,10 +60,10 @@ class Html extends View
 
     /**
      * Display the controller result
-     * 
+     *
      * @param \Qafoo\RMF\Request $request
      * @param mixed $result
-     * 
+     *
      * @return void
      */
     public function display( Request $request, $result )

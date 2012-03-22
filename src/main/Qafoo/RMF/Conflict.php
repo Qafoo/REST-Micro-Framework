@@ -8,7 +8,7 @@
 namespace Qafoo\RMF;
 
 /**
- * Interface to flag exceptions as "conflict", so they can be properly handled 
+ * Interface to flag exceptions as "conflict", so they can be properly handled
  * by HTTP based views.
  *
  * @version $Revision$

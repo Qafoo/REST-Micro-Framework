@@ -21,7 +21,7 @@ class Json extends View
 {
     /**
      * Mapping of HTTP status codes to error names
-     * 
+     *
      * @var array
      */
     protected $errors = array(
@@ -35,9 +35,9 @@ class Json extends View
 
     /**
      * Display the controller result
-     * 
-     * @param Request $request 
-     * @param mixed $result 
+     *
+     * @param Request $request
+     * @param mixed $result
      * @return void
      */
     public function display( Request $request, $result )

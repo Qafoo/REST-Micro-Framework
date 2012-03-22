@@ -12,7 +12,7 @@ use Qafoo\RMF\Request;
 /**
  * Router base class
  *
- * The Router descides which controller should be called based on the 
+ * The Router descides which controller should be called based on the
  * information, which can be found in the ``Request``.
  *
  * @version $Revision$
@@ -21,7 +21,7 @@ class Regexp extends Router
 {
     /**
      * Routes
-     * 
+     *
      * @var array
      */
     protected $routes;
@@ -40,10 +40,10 @@ class Regexp extends Router
      *  ),
      * </code>
      *
-     * Where the regular expression should match the path and the method 
+     * Where the regular expression should match the path and the method
      * specifies the HTTP method, which has been called
-     * 
-     * @param array $routes 
+     *
+     * @param array $routes
      * @return void
      */
     public function __construct( array $routes = array() )
@@ -60,12 +60,12 @@ class Regexp extends Router
     /**
      * Add a regexp based route
      *
-     * The regular expression is amtched against the request path. If the 
+     * The regular expression is amtched against the request path. If the
      * regular expression matches the callback will be returned.
-     * 
-     * @param string $method 
-     * @param string $regexp 
-     * @param Callback $callback 
+     *
+     * @param string $method
+     * @param string $regexp
+     * @param Callback $callback
      * @return void
      */
     public function addRoute( $method, $regexp, $callback )
@@ -77,9 +77,9 @@ class Regexp extends Router
      * Merge matches with a variables array
      *
      * Ignores all numeric keys in the matches array
-     * 
-     * @param array $variables 
-     * @param array $matches 
+     *
+     * @param array $variables
+     * @param array $matches
      * @return array
      */
     protected function mergeMatches( array $variables, array $matches )
@@ -100,11 +100,11 @@ class Regexp extends Router
     /**
      * Return routing information
      *
-     * Based on the provided request and maybe on the router configuration this 
-     * method returns a valid callback to the controller which should be used 
+     * Based on the provided request and maybe on the router configuration this
+     * method returns a valid callback to the controller which should be used
      * to fullfil the reuqest.
-     * 
-     * @param Request $request 
+     *
+     * @param Request $request
      * @return Callback
      */
     public function getRoutingInformation( Request $request )

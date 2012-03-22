@@ -17,15 +17,15 @@ class Superglobal extends PropertyHandler
 {
     /**
      * Name of superglobal to expose
-     * 
+     *
      * @var string
      */
     protected $name;
 
     /**
      * Construct from name of superglobal
-     * 
-     * @param string $name 
+     *
+     * @param string $name
      * @return void
      */
     public function __construct( $name )
@@ -35,7 +35,7 @@ class Superglobal extends PropertyHandler
 
     /**
      * Get value of property handler
-     * 
+     *
      * @return mixed
      */
     public function getValue()

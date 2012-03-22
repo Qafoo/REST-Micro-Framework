@@ -12,7 +12,7 @@ use Qafoo\RMF\View;
 /**
  * View base class
  *
- * HTML Json view, which delivers reult of the aggregated JSON view per 
+ * HTML Json view, which delivers reult of the aggregated JSON view per
  * default, but can nicely format it as HTML, if the client prefers that.
  *
  * @version $Revision$
@@ -21,15 +21,15 @@ class HtmlJson extends View
 {
     /**
      * Aggregated JSON view
-     * 
+     *
      * @var Json
      */
     protected $jsonView;
 
     /**
      * Construct from JSON view
-     * 
-     * @param Json $jsonView 
+     *
+     * @param Json $jsonView
      * @return void
      */
     public function __construct( Json $jsonView )
@@ -39,8 +39,8 @@ class HtmlJson extends View
 
     /**
      * Chack if the client prefers HTML
-     * 
-     * @param Request $request 
+     *
+     * @param Request $request
      * @return bool
      */
     protected function wantsHtml( Request $request )
@@ -62,8 +62,8 @@ class HtmlJson extends View
 
     /**
      * Format given contents as HTML marked up JSON
-     * 
-     * @param mixed $data 
+     *
+     * @param mixed $data
      * @param integer $indentation
      * @param integer $level
      * @return string
@@ -115,9 +115,9 @@ class HtmlJson extends View
 
     /**
      * Display the controller result
-     * 
-     * @param Request $request 
-     * @param mixed $result 
+     *
+     * @param Request $request
+     * @param mixed $result
      * @return void
      */
     public function display( Request $request, $result )

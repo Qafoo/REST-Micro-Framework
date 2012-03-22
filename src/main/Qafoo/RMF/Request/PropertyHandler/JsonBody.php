@@ -16,7 +16,7 @@ class JsonBody extends RawBody
 {
     /**
      * Get value of property handler;
-     * 
+     *
      * @return mixed
      */
     public function getValue()

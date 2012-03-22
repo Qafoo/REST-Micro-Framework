@@ -10,7 +10,7 @@ namespace Qafoo\RMF;
 /**
  * Request class
  *
- * The Request class can be used like a struct to access various information 
+ * The Request class can be used like a struct to access various information
  * which are associated with HTTP requests, like the method, query parameters
  * or the request body. For this handlers can be registered with the request
  * class, which process the requested information on-request (lazy). Each
@@ -28,22 +28,22 @@ class Request
 {
     /**
      * Array of handlers
-     * 
+     *
      * @var array
      */
     protected $handlers;
 
     /**
      * Contents extracted from the handlers
-     * 
+     *
      * @var array
      */
     protected $contents;
 
     /**
      * Construct request from a set of handlers
-     * 
-     * @param array $handlers 
+     *
+     * @param array $handlers
      * @return void
      */
     public function __construct( array $handlers = array() )
@@ -56,9 +56,9 @@ class Request
 
     /**
      * Add a handler for a request property
-     * 
-     * @param string $name 
-     * @param RequestPropertyHandler $handler 
+     *
+     * @param string $name
+     * @param RequestPropertyHandler $handler
      * @return void
      */
     public function addHandler( $name, Request\PropertyHandler $handler )
@@ -68,8 +68,8 @@ class Request
 
     /**
      * Get a request property
-     * 
-     * @param string $property 
+     *
+     * @param string $property
      * @return mixed
      */
     public function __get( $property )
@@ -89,9 +89,9 @@ class Request
 
     /**
      * Allow to set arbitrary values in request struct
-     * 
-     * @param string $property 
-     * @param mixed $value 
+     *
+     * @param string $property
+     * @param mixed $value
      * @return void
      */
     public function __set( $property, $value )
