@@ -12,9 +12,7 @@ use Qafoo\RMF\Request;
 use Qafoo\RMF\View;
 
 /**
- * View base class
- *
- *
+ * Dispatcher for various views depending on the mime-type accept header
  *
  * @version $Revision$
  */
