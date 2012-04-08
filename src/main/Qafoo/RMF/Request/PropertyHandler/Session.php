@@ -34,7 +34,7 @@ class Session extends PropertyHandler
      */
     public function getValue()
     {
-        return $_SESSION;
+        return new Session\Wrapper();
     }
 }
 
