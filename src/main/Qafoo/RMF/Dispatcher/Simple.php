@@ -36,6 +36,11 @@ class Simple extends Dispatcher
         try {
             $callback = $this->router->getRoutingInformation( $request );
 
+            if ( !is_callable( $callback ) )
+            {
+                throw new \RuntimeException( "Invalid callback provided." );
+            }
+
             $this->view->display(
                 $request,
                 call_user_func( $callback, $request )
