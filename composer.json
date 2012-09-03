@@ -1,7 +1,7 @@
 {
     "name":        "qafoo/rmf",
     "description": "Very simple VC framework which makes it easy to build HTTP applications / REST webservices",
-    "version":     "0.0.1-dev",
+    "version":     "1.0.0",
     "autoload":    {
         "psr-0": { "Qafoo\\RMF": "src/main/" }
     }
