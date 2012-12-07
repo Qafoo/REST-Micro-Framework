@@ -76,15 +76,15 @@ class Html extends View
             if ( is_string( $result ) )
             {
                 echo $result;
+                return;
             }
             else if ( isset( $result['template'] ) )
             {
-                $this->render(
+                return $this->render(
                     $result['template'],
                     $result['data']
                 );
             }
-            return;
         }
 
         switch ( true )
@@ -128,27 +128,26 @@ class Html extends View
     {
         $template = realpath( $this->templateDir . $template );
 
-        if ( 0 === strpos( $template, $this->templateDir ) )
-        {
-            $workingDir = getcwd();
-
-            chdir( dirname( $template ) );
-
-            if ( is_array( $result ) )
-            {
-                extract( $result );
-            }
-            else if ( is_object( $result ) )
-            {
-                foreach ( get_object_vars( $result ) as $name => $value )
-                {
-                    $$name = $value;
-                }
-            }
-
-            include $template;
-
-            chdir( $workingDir );
+        if ( 0 !== strpos( $template, $this->templateDir ) ) {
+            throw new \RuntimeException("Invalid error template: " . $this->templateDir . $template);
         }
+
+        $workingDir = getcwd();
+        chdir( dirname( $template ) );
+
+        if ( is_array( $result ) )
+        {
+            extract( $result );
+        }
+        else if ( is_object( $result ) )
+        {
+            foreach ( get_object_vars( $result ) as $name => $value )
+            {
+                $$name = $value;
+            }
+        }
+
+        include $template;
+        chdir( $workingDir );
     }
 }
